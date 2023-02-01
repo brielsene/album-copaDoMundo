@@ -16,6 +16,7 @@ Lista de figurinhas:
 Jogador: ${lista.jogador }
 Número: ${lista.numero }
 Selecao: ${lista.selecao }
+<a href="controller?acao=MostraFigurinha&id=${lista.id }">Editar</a>
 <a href="controller?acao=RemoveFigurinha&id=${lista.id }">Deletar</a>
 </ul>
 </c:forEach>
