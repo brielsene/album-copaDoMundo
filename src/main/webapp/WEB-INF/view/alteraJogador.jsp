@@ -11,8 +11,10 @@ background-size: 100%;
 </style>
 <head>
 <meta charset="ISO-8859-1">
-<title>Cadastro Jogador</title>
+<title>Altera Jogador</title>
 </head>
+<a href="/album-worldcup/controller?acao=Logout">Logout</a>
+<br><br><br>
 
 <body>
 
