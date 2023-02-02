@@ -26,13 +26,14 @@ public class RemoveFigurinha implements Acao {
 			e1.printStackTrace();
 		}
 		
-		try {
+		try(Connection conn = new ConnectionFactory().iniciaConexao();
+				PreparedStatement stm = conn.prepareStatement("DELETE FROM FIGURINHA WHERE ID = ? ");) {
 			
-			Connection conn = new ConnectionFactory().iniciaConexao();
-			PreparedStatement stm = conn.prepareStatement("DELETE FROM FIGURINHA WHERE ID = ? ");
+			
 			stm.setInt(1, id);
 			stm.execute();
-			conn.close();
+			//quando colocamos e iniciamos as variáveis dentro do try() ele automaticamente fecha após o término, tanto o conn.close() e o stm.close
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -8,6 +8,8 @@
 <title>Lista De Figurinhas</title>
 </head>
 <body>
+Ola, ${usuarioLogado.usuario }
+<br><br><br>
 Lista de figurinhas: 
 <br><br><br>
 
