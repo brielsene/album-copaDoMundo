@@ -17,7 +17,7 @@ public class ConnectionFactory {
 		comboPooledDataSource.setJdbcUrl("jdbc:mysql://localhost:3306/albumcup?useTimezone=true&serverTimezone=UTC");
 		comboPooledDataSource.setUser("root");
 		comboPooledDataSource.setPassword("root");
-		comboPooledDataSource.setMaxPoolSize(30);
+		comboPooledDataSource.setMaxPoolSize(300);
 		
 		this.dataSource=comboPooledDataSource;
 	}

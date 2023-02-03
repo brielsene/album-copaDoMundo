@@ -23,12 +23,15 @@ background-size: 100%;
 
 Login: <input type="text" name="login"/>
 Senha: <input type="password" name="senha"/>
+Senha: <input type="password" name="senha2"/>
+<br><br><br>
+${msgErro }
 
-<input type="hidden" name="acao" value="Login">
-<input type="submit" value="Login "/>
+<input type="hidden" name="acao" value="CadastroUsuario">
+<input type="submit" value="Cadastrar "/>
 
 <br><br>
-Se você ainda não for cadastratado <a href="/album-worldcup/controller?acao=FormCadastroUsuario">Cadastra-se</a>
+
 
 </form>
 

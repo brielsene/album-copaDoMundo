@@ -9,6 +9,8 @@
 </head>
 <body>
 Ola, ${usuarioLogado.usuario }
+<br><br>
+<a href="/album-worldcup/controller?acao=Logout">Logout</a>
 <br><br><br>
 Lista de figurinhas: 
 <br><br><br>

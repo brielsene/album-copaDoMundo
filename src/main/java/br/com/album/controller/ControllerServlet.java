@@ -28,13 +28,25 @@ public class ControllerServlet extends HttpServlet {
 		String nomeDaClasse = "br.com.album.acao."+paramAcao;
 		HttpSession sessao = request.getSession();
 		boolean usuarioNaoLogado = sessao.getAttribute("usuarioLogado")==null;
-		boolean ehUmaAcaoProtegida = !(paramAcao.equals("FormLogin")||paramAcao.equals("Login"));
+		boolean ehUmaAcaoProtegida = !(paramAcao.equals("FormLogin")||paramAcao.equals("Login")||paramAcao.equals("FormCadastroUsuario")||paramAcao.equals("CadastroUsuario"));
+		boolean usuarioNovo = paramAcao.equals("FormCadastroUsuario");
 		
 		
 		if(usuarioNaoLogado & ehUmaAcaoProtegida) {
 			response.sendRedirect("controller?acao=FormLogin");
 			return;
+		}else if(usuarioNaoLogado & ehUmaAcaoProtegida & usuarioNovo) {
+			response.sendRedirect("controller?acao=FormCadastroUsuario");
+			return;
+			
 		}
+		
+//		if(!(usuarioNaoLogado & ehUmaAcaoProtegida) & !usuarioNaoNovo) {
+//			response.sendRedirect("controller?acao=FormCadastroUsuario");
+//			return;
+//		}
+		
+	
 		
 		String nome;
 		
